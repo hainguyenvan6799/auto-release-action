@@ -1,0 +1,17 @@
+name: Create a pre-release
+on: push
+  # push:
+  #   branches:
+  #     - v[0-9]+.[0-9]+.[0-9]+_pre-release
+
+jobs:
+  create-a-pre-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to the root
+        uses: action/checkout@v2
+        with:
+          fetch-depth: 0
+      
+      - name: Create a pre-release
+        uses: ./
