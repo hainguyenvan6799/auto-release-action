@@ -3,7 +3,7 @@ description: 'Create a pre-release'
 inputs:
   pre_release_branch:
     description: The branch will be merged to the main branch before creating the release
-    default: $ {{ github.ref_name }}
+    default: ${{ github.ref_name }}
 runs:
   using: node16
   main: "dist/main.js"
