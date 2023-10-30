@@ -12,6 +12,22 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
+      - name: Setup node environment
+        uses: actions/setup-node@v3
+        env:
+          CI: true
+        with:
+          node-version: 16.13.2
+
+      - name: Clear cache
+        run: npm cache clear --force
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
       
       - name: Create a pre-release
         uses: ./
