@@ -8,12 +8,12 @@ runs:
   using: "composite"
   steps:
     - name: Checkout to the root
-      uses: action/checkout@v2
+      uses: actions/checkout@v2
       with:
         fetch-depth: 0
     
     - name: Setup node environment
-      uses: action/setup-node@v3
+      uses: actions/setup-node@v3
       env:
         CI: true
       with:
