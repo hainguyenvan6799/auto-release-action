@@ -15,5 +15,3 @@ jobs:
       
       - name: Create a pre-release
         uses: ./
-        with:
-          pre_release_branch: ${{ github.ref_name }}

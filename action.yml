@@ -32,5 +32,4 @@ runs:
       shell: bash
     
     - name: Create a pre-release
-      run: node dist/main.js
-      shell: bash
+      uses: ./
